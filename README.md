@@ -1,64 +1,52 @@
-#########################################################################################################
-# ---Requirements: 
-
-#   1. Depending where you unzipped the download zip file... you will need to modify the main script as shown below
-#     The unzip will create a folder name "ScriptWrapper". Edit this file ...\ScriptWrapper\ScriptWrapper.ps1
-#     At line 30 (approx) edit this and point it to the folder were you want this tool to reside.
-#       $SourceFolder = "F:\PowerShell\ScriptWrapper" - This can be a local or UNC path.
-#   2. In some cases your laptop gives and error about running scripts. Here is the solution... 
-#      - You need to launch PowerShell as admin to make this change.
-#      - Enter this command ... set-ExecutionPolicy RemoteSigned -Scope LocalMachine then exit PowerShell completely.
-#   3. Launch this script again with PowerShell (or PowerShell_ISE) as a user. Do not use RunAS.
-#      This script must be launched as a regular user (to have access to your profile path).
-# ---There are 2 main folders: 
-#      1) $SourceFolder - selfcontained files and folders needed by the ScriptsWrapper Tool.
-#      2) $CacheRoot  - Created on client machine during 1st launch - output files and other settings files.
-$SourceFolder = "F:\PowerShell\ScriptWrapper" # This must match the path to the files (local or UNC).
-$CacheRoot  = "$($env:appdata)\ScriptWrapper" # Users logon profile path required (store output generated plus more).
-#
-#------------------------------------------------
-=================
-Required:
-    - Launch the ScriptsWrapper with default credentials. Do not use RunAs.
-      Default credentials are required for the ScriptsWrapper to have access to your profile path.
-    - The ScriptsWrapper will prompt for privileged credentials when accessing a remote server(s).
-  ---------------
-  Note: In a team environment, the ScriptsWrapper files should be stored on a UNC Path.
-      Team members launch the main file (ScriptWrapper.ps1) from the UNC path location.
-      The ScriptsWrapper (on 1st launch) uses your local profile path to create a cache folder.
-      Cache files include:
-        Subfolder (Config)          - Settings for Creds, Operation (local/remote), etc.
-        Subfolder (Modules)         - Custom PowerShell modules required by the main app.
-        Subfolder (ScriptsTemplate) - files used when creating or adding new scripts.
-        Subfolder for each script repository. Output files are saved here.
-      Delete this local cache folder for a complete removal of the ScriptsWrapper tool.
-=================
-Purpose:
-    This tool was created to address the difficulties that come with an ever growing PowerShell Scripts repository.
-    This tool handles many of the tasks that a standalone script would do, such as:
+1. Depending where you unzipped the download zip file... you will need to modify the main script as shown below
+   The unzip will create a folder name "ScriptWrapper". Edit this file...\ScriptWrapper\ScriptWrapper.ps1
+   At line 30 (approx) edit this and point it to the folder where you want this tool to reside. 
+     $SourceFolder = "F:\PowerShell\ScriptWrapper" - This can be a local or UNC path.
+2. In come cases your lalptop gives an error about running scripts. Here is the solution.
+   Launch PowerShell as Admin to make this change.
+   Change the PowerShell execution policy - run this command.
+     set-ExecutionPolicy RemoteSigned -Scope LocalMachine
+   Exit PowerShell before opening PowerShell again to launch the script. 
+3. Launch the script with PowerShell (or PowerShell_ISE) as a user. Do not use RunAs.
+   This script must be launched as a regular user to have access to your profile path.
+   The ScriptsWrapper will prompt for privileged credentials when accessing a remote server(s).
+4. In a team environment, the ScriptWrapper Source files (Unzip) should be stored on a UNC path.
+       Team members launch the main file (ScriptWrapper.ps1) from the UNC path location.
+   The ScriptsWrapper (on 1st launch) uses your local profile path to create a cache folder.
+   Cache files include the following:
+   - Subfolder (Config)          - Settings for Creds, Operation (local/remote), etc.
+   - Subfolder (Modules)         - Custom PowerShell modules required by the main app.
+   - Subfolder (ScriptsTemplate) - files used when creating or adding new scripts.
+   - Subfolder for each script repository. Output files are saved here.
+   - Delete this local cache folder for a complete removal of the ScriptsWrapper tool.
+5. Purpose:
+   This tool was created to address the difficulties that come with an ever growing PowerShell Scripts repository.
+   This tool handles many of the tasks that a standalone script would do, such as:
     - Reading in the Server List
     - Invoking the (selected) script on the remote server(s) 
     - Collecting the remote results (when complete)
     - Displaying the results
     - Saving output to excel or notepad
     - Logging script usage
-=================
-The main app window: 
-    Top   - Several menu items.
-    Top   - Title with an expander for basic settings.
-    Top   - Row of buttons including where you select the scripts folder path.
-    Left  - Textbox for adding computer names.
-    Right - Tab window (red Main tab) + results tabs as you run scripts.
-=================
-Title - With expander for basic settings: 
-	Credentials 
-	    Manual Creds - Credentials are encrypted and stored in a variable. This variable can be cleared when switching radio buttons.
-	    Creds Manager - Uses the Control Panel Credentials manager to securely store credentials.
-	Run Scripts On - Remote Servers - Use this to send a script-block to your list of servers
-    	    Local Only - Use this to force all script execution to occur on the local machine. I use this when developing scripts.
-	Add/Remove Script Folders - Add custom team folders for various needs/roles.
-            The repository/folder can be on a local drive ... or a UNC path.
-=================
+--------------------------
+* The Main app window:
+   - Top    - Serveral menu items.
+   - Top    - Title with an expander for basic settings.
+   - Top    - Row of buttons including where you select the scripts folder path.
+   - Left   - Textbox for adding computer names.
+   - Right  - Tab window (Red Main tab) + results tabs as you run scripts.
+1. Title with expander for basic settings.
+   - Credentials
+     Manual Creds - Credentials are encrypted and stored in a variable.
+     Creds Manager - Uses the control panel credentials manager to securely store credentials for various domains.
+   - Run Scripts on
+     Remote Servers - Use this to send scripts to remote servers for execution on your list of servers
+     Local Only - Use this to force all scripts to only run on the local machine.
+   - Add/Remove Script Folders - Add a new script repository (folder) to this tool.
+     The new folder can be a UNC path or local folder.
+2. Select a scripts folder (repository) ... and click the refresh button.
+   The ScriptWrapper will read all the .ps1 files in the folder and build a list of script for display on the red Main tab.
+(needs cleaned up)
 Select a scripts folder (repository) ... and click the refresh button:
     The ScriptsWrapper will read all the .ps1 files and build a list of scripts for display on the red Main tab.
     =============
