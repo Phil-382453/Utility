@@ -46,7 +46,9 @@
      The new folder can be a UNC path or local folder.
 2. Select a scripts folder (repository) ... and click the refresh button.
    The ScriptWrapper will read all the .ps1 files in the folder and build a list of script for display on the red Main tab.
-(needs cleaned up)
+
+
+needs cleaned up     
 Select a scripts folder (repository) ... and click the refresh button:
     The ScriptsWrapper will read all the .ps1 files and build a list of scripts for display on the red Main tab.
     =============
