@@ -1,3 +1,14 @@
+* Purpose of this tool
+   - This tool was created to address the difficulties that come with an ever growing PowerShell Scripts repository.
+   - Benefits include the ability to manage thousands of scripts in hundreds of repositories.
+   - The only requirement for adding a new script is 3 lines of "comment-based help" at the script top. See Developers Note below.
+   - This tool handles many of the tasks that a standalone script would do, such as:
+     - Reading in the Server List
+     - Invoking the (selected) script on the remote server(s) 
+     - Collecting the remote results (when complete)
+     - Displaying the results
+     - Saving output to excel or notepad
+     - Logging script usage
 
 * Download the Zip file. Unzip will create a folder (ScriptWrapper).
   - Copy this folder to its final location.
@@ -32,18 +43,6 @@
 * Uninstall - Uninstall button on the main app window under settings...This will delete the wrapper local cache files.
    You can also delete this local cache folder to uninstall the client files.
   
-* Purpose of this tool
-   - This tool was created to address the difficulties that come with an ever growing PowerShell Scripts repository.
-   - Benefits include the ability to manage thousands of scripts in hundreds of repositories.
-   - The only requirement for adding a new script is 3 lines of "comment-based help" at the script top. See Developers Note below.
-   - This tool handles many of the tasks that a standalone script would do, such as:
-     - Reading in the Server List
-     - Invoking the (selected) script on the remote server(s) 
-     - Collecting the remote results (when complete)
-     - Displaying the results
-     - Saving output to excel or notepad
-     - Logging script usage
-
 * The Main app window:
    - Top    - Serveral menu items (Help,Folders,Exit)
    - Top    - Settings - This is an expander to access the settings.
