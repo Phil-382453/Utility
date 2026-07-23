@@ -18,8 +18,8 @@
 * Install consists of Running this file (ScriptWrapper.ps1).
   - This will copy a subfolder (New_Cache) from 
     the (source) zip files to a new (ScriptWrapper) folder on the local machine, in the users local profile.
-  - Every time you launch this script, it will sync the New_Cache to the source if the source is different from the cache. 
-    Then it continues to load the rest of the script including the application window.
+  - Everytime you launch this script, it will sync the New_Cache to the source (if the source is different from the cache). 
+  - Then it continues to load the rest of the script including the application window.
   - This (sync) prevents the client from modifying the default files between application launches.
   - This also allows the source files to be modified then automatically synchronized to the client every launch.
   - In some cases, your laptop might give an error about running scripts. This might be the solution.
