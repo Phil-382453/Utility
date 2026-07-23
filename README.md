@@ -1,26 +1,21 @@
 Download and install/uninstall steps
-Download the Zip file. Unzip will create a folder (ScriptWrapper). Copy this folder to its final location.
+* Download the Zip file. Unzip will create a folder (ScriptWrapper). Copy this folder to its final location.
 Inside this folder is the main application file (ScriptWrapper.ps1)...a powershell script.
 Reading this script in PowerShell_ISE is helpful to low or mid level programmers. It is extensively documented.
-Install consists of Running this file (ScriptWrapper.ps1). This will copy a subfolder (New_Cache) from 
+* Install consists of Running this file (ScriptWrapper.ps1). This will copy a subfolder (New_Cache) from 
     the (source) zip files to a new (ScriptWrapper) folder on the local machine, in the users local profile.
-	The source files include a (repository) folder called dev that includes 44 working powershell scripts.
-Every time you launch this script, it will sync the New_Cache to the source if the source is different from the cache. 
+	The source files include a (repository) folder called DevScripts that includes 44 working powershell scripts.
+* Every time you launch this script, it will sync the New_Cache to the source if the source is different from the cache. 
    Then it continues to load the rest of the script including the application window.
    This (sync) prevents the client from modifying the default files between application launches.
    This also allows the source files to be modified then automatically synchronized to the client every launch.
-1. After you unzip the download zip file... you will need to modify the main script as shown below
-   The unzip will create a folder name "ScriptWrapper". After you move this folder to its final location ...
-      edit this file...\ScriptWrapper\ScriptWrapper.ps1 ... and modify the hard-coded path that currently exists.
-   At line 30 (approx) Example: $SourceFolder = "F:\PowerShell\ScriptWrapper"
-      point this path to the folder where you put the source folder (ScriptWrapper). This can be a local or UNC path.
-3. In some cases, your lalptop might give an error about running scripts. Here is the solution.
+1. In some cases, your lalptop might give an error about running scripts. Here is the solution.
    Launch PowerShell as Admin. Change the PowerShell execution policy to remote signed - run this command.
      set-ExecutionPolicy RemoteSigned -Scope LocalMachine
-4. Launch the script with PowerShell (or PowerShell_ISE) as current user. Do not use RunAs.
+2. Launch the script with PowerShell (or PowerShell_ISE) as current user. Do not use RunAs.
    This script must be launched as a regular user to have access to your profile path.
    The ScriptsWrapper will prompt for privileged credentials when accessing a remote server(s).
-5. In a team environment, the ScriptWrapper Source files (Unzip) should be stored on a UNC path.
+3. In a team environment, the ScriptWrapper Source files (Unzip) should be stored on a UNC path.
        Team members launch the main file (ScriptWrapper.ps1) from the UNC path location.
        I use a batch file on the desktop ... start PowerShell_ISE.exe "F:\PowerShell\ScriptWrapper\ScriptWrapper.ps1"
    The ScriptsWrapper (on 1st launch) uses your local profile path to create a cache folder.
