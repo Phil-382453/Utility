@@ -14,7 +14,7 @@
   - In some cases, your laptop might give an error about running scripts. This might be the solution.
      - Launch PowerShell as Admin. Change the PowerShell execution policy to remote signed - run this command.
      - set-ExecutionPolicy RemoteSigned -Scope LocalMachine
-  - Launch this script with PowerShell (or PowerShell_ISE) as current user. Do not use RunAs.
+  - Launch ScriptWrapper.ps1 with PowerShell (or PowerShell_ISE) as current user. Do not use RunAs.
      - This script must be launched as a regular user to have access to your profile path.
      - The ScriptsWrapper will prompt for privileged credentials when accessing a remote server(s).
   - In a team environment, the ScriptWrapper Source files (unzip) should be stored on a UNC path.
