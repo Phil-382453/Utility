@@ -27,7 +27,6 @@
    - Subfolder (Modules)         - Custom PowerShell modules required by the main app.
    - Subfolder (ScriptsTemplate) - files used when creating or adding new scripts.
    - Subfolder - for each script repository listed on the Ren Main tab. Output files are saved here.
-   - The cache files copied are a subfolder of the source files.
    - Source files not copied include a folder (script repo) called DevScripts that includes 44 working powershell scripts.
 
 * Uninstall - Uninstall button on the main app window under settings...This will delete the wrapper local cache files.
