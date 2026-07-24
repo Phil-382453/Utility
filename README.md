@@ -20,7 +20,7 @@
   - In some cases, your laptop might give an error about running scripts. The most common solution follows.
      - Launch PowerShell as Admin. Change the PowerShell execution policy to remote signed - run this command.
      - set-ExecutionPolicy RemoteSigned -Scope LocalMachine
-  - This will copy a subfolder (New_Cache) from the (source) zip files
+  - Running the install will copy a subfolder (New_Cache) from the (source) zip files
     to a new (ScriptWrapper) folder on the local machine, in the users local profile. This is called the users/local cache.
   - Everytime you launch this script, robocopy will compare the cache files, last modified date property,
     to the source file last modified date. If a difference is found, robocopy will re-sync the modified files on the client. 
