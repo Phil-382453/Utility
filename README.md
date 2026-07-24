@@ -15,26 +15,25 @@
   - Inside this folder is the main application file (ScriptWrapper.ps1)...a powershell script.
   - Reading this script in PowerShell_ISE is helpful to low or mid level programmers. It is extensively documented.
 
-* Install consists of Running this file (ScriptWrapper.ps1).
-  - This will copy a subfolder (New_Cache) from 
-    the (source) zip files to a new (ScriptWrapper) folder on the local machine, in the users local profile.
-  - Everytime you launch this script, it will sync the New_Cache to the source (if the source is different from the cache). 
-  - Then it continues to load the rest of the script including the application window.
-  - This (sync) prevents the client from modifying the default files between application launches.
-  - This also allows the source files to be modified then automatically synchronized to the client every launch.
-  - In some cases, your laptop might give an error about running scripts. This might be the solution.
+* Install (and future app launches) consists of Running this file (ScriptWrapper.ps1) using the default user account.
+  - This will copy a subfolder (New_Cache) from the (source) zip files
+    to a new (ScriptWrapper) folder on the local machine, in the users local profile. This is called the users/local cache.
+  - Everytime you launch this script, robocopy will compare the cache files, last modified date property,
+    to the source file last modified date. If a difference is found, robocopy will re-sync the modified files on the client. 
+  - launch continues to load the rest of the script including the application window.
+  - If you are reading the code in PowerShell_ISE ... code to draw the app window is at the bottom of the script.
+  - Once the app window loads, the user can select the desired scripts repo and click the refresh button.
+  - The refresh button will populate the red Main tab with the script in the selected repository.
+  - This (sync) during launch prevents the client from modifying the default files between application launches.
+  - This also allows the source files to be updated then automatically synchronized to the client every launch.
+  - In some cases, your laptop might give an error about running scripts. The most common solution follows.
      - Launch PowerShell as Admin. Change the PowerShell execution policy to remote signed - run this command.
      - set-ExecutionPolicy RemoteSigned -Scope LocalMachine
-  - Launch ScriptWrapper.ps1 with PowerShell (or PowerShell_ISE) as current user. Do not use RunAs.
-     - This script must be launched as a regular user to have access to your profile path.
-     - The ScriptsWrapper will prompt for privileged credentials when accessing a remote server(s).
-  - In a team environment, the ScriptWrapper Source files (unzip) should be stored on a UNC path.
+  - In a team environment, the ScriptWrapper Source files (unzip) should be stored on a shared UNC path.
      - Team members launch the main file (ScriptWrapper.ps1) from the UNC path location.
      - I use a batch file on the desktop ... start PowerShell_ISE.exe "F:\PowerShell\ScriptWrapper\ScriptWrapper.ps1"
-*  The ScriptsWrapper (on 1st launch) uses your local profile path to create a cache folder.
-       Install actions are written to the powershell console.
-   Cache files copied include the following:
-   - Subfolder (Config)          - Settings for Creds, Operation (local/remote), etc.
+* Cache files copied (New_Cache) include the following:
+   - Subfolder (Config)          - Initial settings for Creds, Operation (local/remote), etc.
    - Subfolder (Modules)         - Custom PowerShell modules required by the main app.
    - Subfolder (ScriptsTemplate) - files used when creating or adding new scripts.
    - Subfolder - for each script repository listed on the Ren Main tab. Output files are saved here.
@@ -67,6 +66,7 @@
     The Main app window will minimize and return once the script run is complete.
     Script results will be written to file then sent to a new output tab.
     All tabs except the main tab can be closed at any time.
+  - The ScriptsWrapper will prompt for privileged credentials when accessing a remote server(s).
 
 * Main (red) Tab Items
     Aways the 1st tab to open (cannot be closed), it contains the following: 
