@@ -14,6 +14,7 @@
   - Copy this folder to its final location.
   - Inside this folder is the main application file (ScriptWrapper.ps1)...a powershell script.
   - Reading this script in PowerShell_ISE is helpful to low or mid level programmers. It is extensively documented.
+  - It is easiest to read this script using ctrl+m to collapse all the expandable sections. Then expand as needed.
 
 * Install (and future app launches) consists of Running this file (ScriptWrapper.ps1) using the default user account.
   - In some cases, your laptop might give an error about running scripts. The most common solution follows.
