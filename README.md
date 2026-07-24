@@ -27,7 +27,7 @@
   - launch continues to load the rest of the script including the application window.
   - If you are reading the code in PowerShell_ISE ... code to draw the app window is at the bottom of the script.
   - Once the app window loads, the user can select the desired scripts repo and click the refresh button.
-  - The refresh button will populate the red Main tab with the script in the selected repository.
+  - The refresh button will populate the red Main tab with the script files in the selected repository.
   - The (sync) during launch prevents the client from modifying the default files between application launches.
   - This also allows the source files to be updated then automatically synchronized to the client every launch.
   - In a team environment, the ScriptWrapper Source files (unzip) should be stored on a shared UNC path.
