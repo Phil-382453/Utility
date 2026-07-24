@@ -16,6 +16,9 @@
   - Reading this script in PowerShell_ISE is helpful to low or mid level programmers. It is extensively documented.
 
 * Install (and future app launches) consists of Running this file (ScriptWrapper.ps1) using the default user account.
+  - In some cases, your laptop might give an error about running scripts. The most common solution follows.
+     - Launch PowerShell as Admin. Change the PowerShell execution policy to remote signed - run this command.
+     - set-ExecutionPolicy RemoteSigned -Scope LocalMachine
   - This will copy a subfolder (New_Cache) from the (source) zip files
     to a new (ScriptWrapper) folder on the local machine, in the users local profile. This is called the users/local cache.
   - Everytime you launch this script, robocopy will compare the cache files, last modified date property,
@@ -24,11 +27,8 @@
   - If you are reading the code in PowerShell_ISE ... code to draw the app window is at the bottom of the script.
   - Once the app window loads, the user can select the desired scripts repo and click the refresh button.
   - The refresh button will populate the red Main tab with the script in the selected repository.
-  - This (sync) during launch prevents the client from modifying the default files between application launches.
+  - The (sync) during launch prevents the client from modifying the default files between application launches.
   - This also allows the source files to be updated then automatically synchronized to the client every launch.
-  - In some cases, your laptop might give an error about running scripts. The most common solution follows.
-     - Launch PowerShell as Admin. Change the PowerShell execution policy to remote signed - run this command.
-     - set-ExecutionPolicy RemoteSigned -Scope LocalMachine
   - In a team environment, the ScriptWrapper Source files (unzip) should be stored on a shared UNC path.
      - Team members launch the main file (ScriptWrapper.ps1) from the UNC path location.
      - I use a batch file on the desktop ... start PowerShell_ISE.exe "F:\PowerShell\ScriptWrapper\ScriptWrapper.ps1"
@@ -42,7 +42,7 @@
 * Uninstall - Uninstall button on the main app window under settings...This will delete the wrapper local cache files.
    You can also delete this local cache folder to uninstall the client files.
   
-* The Main app window:
+* The Main app window: See the "Screenshot Main App.jpg" file
    - Top    - Serveral menu items (Help,Folders,Exit)
    - Top    - Settings - This is an expander to access the settings.
      - a. Simple Admin credentials vs Control Panel Credentials Manager
@@ -53,20 +53,20 @@
    - Left   - Textbox for adding computer names (add 1 name or add 10,000 names).
    - Bottom - Tab window (Red Main tab) + results tabs. New result tab opens every time you run a script.
 
-* Red Main Tab (occupies 90 percent of the app window)
-    Select a script repository click the refresh button (Top right). This will populate the Main tab.
-    The red Main tab fills with the list of scripts in the selected repository.
-    The 1st column - ScriptName - this is the filename in the repository folder.
-    The 2nd column - checkbox to mark favorite scripts. 
-    The 3rd column - Description - comes from a variable in the script file "context-sensitive help"
+* Red Main Tab 
+   - Select a script repository then click the green "Refresh" button (Top right).
+   - The red Main tab fills with the list of scripts in the selected repository.
+   - The 1st column - ScriptName - this is the filename in the repository folder.
+   - The 2nd column - checkbox to mark favorite scripts. Favorite scripts are sorted at the top after refresh.
+   - The 3rd column - Description - comes from a variable in the script file "context-sensitive help"
 
-* Launching a script
-    Enter you list of servers in the left side text box.
-	Select a script to run. Hi-lite and click the run button - or dbl-click script name.
-    The Main app window will minimize and return once the script run is complete.
-    Script results will be written to file then sent to a new output tab.
-    All tabs except the main tab can be closed at any time.
-  - The ScriptsWrapper will prompt for privileged credentials when accessing a remote server(s).
+* Launching a script. 
+   - Enter you list of servers in the left side text box.
+   - Select a script to run. Hi-lite and click the run button - or dbl-click script name.
+   - For remote execution mode, you will be prompted for credentials to the server(s).
+   - The Main app window will minimize and return once the script run is complete.
+   - Script results are written to file and sent to an output tab. See the "Screenshot Output.jpg" file
+   - All tabs except the main tab can be closed at any time.
 
 * Main (red) Tab Items
     Aways the 1st tab to open (cannot be closed), it contains the following: 
