@@ -44,6 +44,7 @@
    You can also delete this local cache folder to uninstall the client files.
   
 * The Main app window: See the "Screenshot Main App.jpg" file
+   - Many Textboxes or settings you change remember the new value even after restart.
    - Top    - Serveral menu items (Help,Folders,Exit)
    - Top    - Settings - This is an expander to access the settings.
      - a. Simple Admin credentials vs Control Panel Credentials Manager
@@ -62,7 +63,7 @@
    - The 3rd column - Description - comes from ".Synopsis" in the script file "context-sensitive help"
 
 * Launching a script. 
-   - Enter you list of servers in the left side text box.
+   - Enter you list of servers in the left side textbox (N/A for local script run).
    - Select a script to run. Hi-lite and click the run button - or dbl-click script name.
    - For remote execution mode, you will be prompted for credentials to the server(s).
    - The Main app window will minimize and return once the script run is complete.
@@ -74,23 +75,24 @@
     1. The list of Scripts - This includes the Script Name, Favorites checkbox, and script Description.
        - Script Name - Red   - The script has the ability to modify a server(s).
        - Script Name - Black - The script can collect info only.
-       - Description - Blue  - The script has an InputTab. 
-       - The favorites checkbox - checked items are displayed at the top of the list of scripts.
+       - Script Name - Pink  - The script is a Template Scripts
+       - Description - Blue  - The script has an InputTab.
 
-    2. "Filter Scripts on Keyword" Textbox - This allows you to find matching scripts quickly. 
+    2. "Filter Scripts on Keyword" Textbox - This allows you to find matching scripts quickly.
+       - Don't forget to clear your search box when complete.
        - Keywords fall into 3 categories:
-       - Function - Keywords = Patches, Network, Drives, CPU, Firmware, etc.
-       - Script   - Keywords = Standalone, Text, Table, InputTab
-       - Action   - Keywords = Warning, AdminScript, NewScript
+       - Function    - Keywords = Patches, Network, Drives, CPU, Firmware, etc.
+       - Script type - Keywords = Standalone, Text, Table, InputTab
+       - Action      - Keywords = NewScript, Warning (for red scripts)
 
-    3. Other Tabs
+    4. Other Tabs
        - Output Tab - script results are sent to a new output tab every time a script returns output.
-       - Errors Tab - Errors are sent to an Error Tab (and file).
-	     The Errors file is overwritten each time you launch a script. 
+       - Errors Tab - Errors are sent to an Error Tab (and file). Example: 123 servers good output, 2 server errors.
+	     The Errors file is overwritten each time you launch a script. Move the error file to safe storage if save needed. 
        - Input Tab  - Some scripts need you to enter input and make some selections (vs running on the server immediately).
-	     These scripts contain the code to draw the input tab along with the code to run on the server.
+	     These scripts contain the code to draw the input tab along with the code to launch scriptlets remotely.
 
-	4. Output is sent to its own new tab. You can have text or table output.
+	5. Output is sent to its own new tab. You can have text or table output.
        - Output tabs - have a row of buttons at the bottom. 
          - Send output to notepad - available for text  output.
          - Send output to excel   - available for table output.
@@ -103,7 +105,7 @@
     - Copy and Rename the template script to a new scripts folder. 
     - Edit the template script as needed. Save your changes.
     - Click the Refresh button (path to your new script) - this will pull script updates into this tool.
-    - Repeat as needed ... Edit script, Save, Refresh button, Run (verify).
+    - Edit script, Save, Refresh button, Run (verify) ... Repeat as needed.
 	
     - The top of each script contains a help section that is required for your script to work in this tool:
     -      .Synopsis      - Provide a description of the script (Main tab - 3rd column of the scripts list).
