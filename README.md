@@ -33,8 +33,8 @@
   - In a team environment, the ScriptWrapper Source files (unzip) should be stored on a shared UNC path.
      - Team members launch the main file (ScriptWrapper.ps1) from the UNC path location.
      - I use a batch file on the desktop ... start PowerShell_ISE.exe "F:\PowerShell\ScriptWrapper\ScriptWrapper.ps1"
-* Cache files copied (New_Cache) include the following:
-   - Subfolder (Config)          - Initial settings for Creds, Operation (local/remote), etc.
+* Default Cache files (New_Cache) include the following:
+   - Subfolder (Config)          - 1) Initial settings for Creds, 2) Operation (local/remote), etc.
    - Subfolder (Modules)         - Custom PowerShell modules required by the main app.
    - Subfolder (ScriptsTemplate) - files used when creating or adding new scripts.
    - Subfolder - for each script repository listed on the Ren Main tab. Output files are saved here.
@@ -59,7 +59,7 @@
    - The red Main tab fills with the list of scripts in the selected repository.
    - The 1st column - ScriptName - this is the filename in the repository folder.
    - The 2nd column - checkbox to mark favorite scripts. Favorite scripts are sorted at the top after refresh.
-   - The 3rd column - Description - comes from a variable in the script file "context-sensitive help"
+   - The 3rd column - Description - comes from ".Synopsis" in the script file "context-sensitive help"
 
 * Launching a script. 
    - Enter you list of servers in the left side text box.
@@ -70,11 +70,11 @@
    - All tabs except the main tab can be closed at any time.
 
 * Main (red) Tab Items
-    Aways the 1st tab to open (cannot be closed), it contains the following: 
+    The 1st tab to open (cannot be closed), it contains the following: 
     1. The list of Scripts - This includes the Script Name, Favorites checkbox, and script Description.
        - Script Name - Red   - The script has the ability to modify a server(s).
-       - Script Name - Black - Collect info only ... no modifications to server(s).
-       - Description - Blue  - The script has an InputTab.
+       - Script Name - Black - The script can collect info only.
+       - Description - Blue  - The script has an InputTab. 
        - The favorites checkbox - checked items are displayed at the top of the list of scripts.
 
     2. "Filter Scripts on Keyword" Textbox - This allows you to find matching scripts quickly. 
