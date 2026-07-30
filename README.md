@@ -1,5 +1,4 @@
-* Purpose of this tool
-   - This tool was created to address the difficulties that come with an ever growing PowerShell Scripts repository.
+* This tool was created to address the difficulties that come with an ever growing PowerShell Scripts repository.
    - Benefits include the ability to manage thousands of scripts in hundreds of repositories.
    - The only requirement for adding a new script is 3 lines of "comment-based help" at the script top. See Developers Note below.
    - This tool handles many of the tasks that a standalone script would do, such as:
