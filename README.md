@@ -94,25 +94,25 @@
     The selected scripts repository is remembered. You will have to click refresh to see the list of scripts again.
 ---------------------------
 * Developers Note: 
-    * Template Scripts (default repository) are used when creating your own custom scripts. They provide a guide to follow. 
-    * Create and run your new scripts in (settings) local only mode until you are sure they work correctly.
-    * Choose the template type of script you want to create.
-    * Copy and Rename the template script to a new scripts folder. 
-    * Edit the template script as needed. Save your changes.
-    * Click the Refresh button (path to your new script) - this will pull script updates into this tool.
-    * Edit script, Save, Refresh button, Run (verify) ... Repeat as needed.
-    * The top of each script contains a help section that is required for your script to work in this tool:
-      * Synopsis - Provide a description of the script (Main tab - 3rd column of the scripts list).
-      * Functionality - a comma separated list of keywords. (used with Find Scripts by Keyword(s)).
-      * Output - Text, Table, MultiSheet, InputTab, Local, or Standalone.
-        - Text  - Output/Results are sent to a text based output tab. Bottom buttons let you send this to notepad.
-        - Table - Output/Results are sent to a table based output tab. Bottom buttons let you send this to excel.
-        - Multisheet - Results are sent to multiple output tabs. Each tab can be text or table based on your choices.
-        - InputTab   - Used when your script has user choices prior to launching it on a remote server list.
-        - Standalone - Used to quickly move an existing PowerShell script into the ScriptsWrapper tool.
-          - You add (copy and paste) a help section to the top of your script. Add the PAUSE cmd to the end.
-          - Then drop it in a 'Scripts' folder. Click the refresh button and it is immediately available.
-          - The script launches in a separate PowerShell instance, which closes immediately upon completion. 
-          - None of the advanced features are available. The only benefit - launching your script from inside the tool.
-        - local - This will force the script to run on the local machine only, regardless of the choice under settings. 
-          - Sometimes you have a script that needs to run locally (always). Example - sending data to Outlook email.
+  * Template Scripts (default repository) are used when creating your own custom scripts. They provide a guide to follow. 
+  * Create and run your new scripts in (settings) local only mode until you are sure they work correctly.
+  * Choose the template type of script you want to create.
+  * Copy and Rename the template script to a new scripts folder. 
+  * Edit the template script as needed. Save your changes.
+  * Click the Refresh button (path to your new script) - this will pull script updates into this tool.
+  * Edit script, Save, Refresh button, Run (verify) ... Repeat as needed.
+  * The top of each script contains a help section that is required for your script to work in this tool:
+    * Synopsis - Provide a description of the script (Main tab - 3rd column of the scripts list).
+    * Functionality - a comma separated list of keywords. (used with Find Scripts by Keyword(s)).
+    * Output - Text, Table, MultiSheet, InputTab, Local, or Standalone.
+      - Text  - Output/Results are sent to a text based output tab. Bottom buttons let you send this to notepad.
+      - Table - Output/Results are sent to a table based output tab. Bottom buttons let you send this to excel.
+      - Multisheet - Results are sent to multiple output tabs. Each tab can be text or table based on your choices.
+      - InputTab   - Used when your script has user choices prior to launching it on a remote server list.
+      - Standalone - Used to quickly move an existing PowerShell script into the ScriptsWrapper tool.
+        - You add (copy and paste) a help section to the top of your script. Add the PAUSE cmd to the end.
+        - Then drop it in a 'Scripts' folder. Click the refresh button and it is immediately available.
+        - The script launches in a separate PowerShell instance, which closes immediately upon completion. 
+        - None of the advanced features are available. The only benefit - launching your script from inside the tool.
+      - local - This will force the script to run on the local machine only, regardless of the choice under settings. 
+        - Sometimes you have a script that needs to run locally (always). Example - sending data to Outlook email.
