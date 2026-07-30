@@ -94,15 +94,14 @@
     The selected scripts repository is remembered. You will have to click refresh to see the list of scripts again.
 ---------------------------
 * Developers Note: 
-    - Template Scripts (default repository) are used when creating your own custom scripts. They provide a guide to follow. 
-    - Create and run your new scripts in (settings) local only mode until you are sure they work correctly.
-    - Choose the template type of script you want to create.
-    - Copy and Rename the template script to a new scripts folder. 
-    - Edit the template script as needed. Save your changes.
-    - Click the Refresh button (path to your new script) - this will pull script updates into this tool.
-    - Edit script, Save, Refresh button, Run (verify) ... Repeat as needed.
-	
-    - The top of each script contains a help section that is required for your script to work in this tool:
+    * Template Scripts (default repository) are used when creating your own custom scripts. They provide a guide to follow. 
+    * Create and run your new scripts in (settings) local only mode until you are sure they work correctly.
+    * Choose the template type of script you want to create.
+    * Copy and Rename the template script to a new scripts folder. 
+    * Edit the template script as needed. Save your changes.
+    * Click the Refresh button (path to your new script) - this will pull script updates into this tool.
+    * Edit script, Save, Refresh button, Run (verify) ... Repeat as needed.
+    * The top of each script contains a help section that is required for your script to work in this tool:
       * Synopsis - Provide a description of the script (Main tab - 3rd column of the scripts list).
       * Functionality - a comma separated list of keywords. (used with Find Scripts by Keyword(s)).
       * Output - Text, Table, MultiSheet, InputTab, Local, or Standalone.
