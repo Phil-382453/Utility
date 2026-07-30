@@ -42,18 +42,11 @@
    - There is an uninstall button under settings on the main window.
   
 * The Main app window: See the "Screenshot Main App.jpg" file
-   - Many Textboxes or settings you change remember the new value even after restart.
-   - Top    - Serveral menu items (Help,Folders,Exit)
-   - Top    - Settings - This is an expander to access the settings.
+   - Settings - This is an expander to access the settings.
      - a. Simple Admin credentials vs Control Panel Credentials Manager
      - b. Run scripts on local machine vs Push scripts out to remote servers.
      - c. Uninstall - deletes the local cache folder
      - d. Add/Remove script repository folder paths
-   - Top    - Row of buttons including a drop down list, where you select the repository folder path.
-   - Left   - Textbox for adding computer names (add 1 name or add 10,000 names).
-   - Bottom - Tab window (Red Main tab) + results tabs. New result tab opens every time you run a script.
-
-* Red Main Tab 
    - Select a script repository then click the green "Refresh" button (Top right).
    - The red Main tab fills with the list of scripts in the selected repository.
    - The 1st column - ScriptName - this is the filename in the repository folder.
