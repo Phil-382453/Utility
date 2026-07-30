@@ -55,9 +55,9 @@
 
 * Launching a script. 
    - Enter you list of servers in the left side textbox (N/A for local script run).
-   - Select a script to run. Hi-lite and click the run button - or dbl-click script name.
-   - For remote execution mode, you will be prompted for credentials to the server(s).
-   - The Main app window will minimize and return once the script run is complete.
+   - Select a script and click the run button - or dbl-click script name to launch it.
+   - For remote execution mode, you will be prompted for credentials to the server(s) at this time.
+   - The Main app window will minimize while your script is running.
    - Script results are written to file and sent to an output tab. See the "Screenshot Output.jpg" file
    - All tabs except the main tab can be closed at any time.
 
@@ -88,6 +88,10 @@
          - Send output to notepad - available for text  output.
          - Send output to excel   - available for table output.
          - The Close button       - will close the current tab.
+* All the choices on the app window will be saved even after you close this tool (saved to local cache).
+    When you launch this tool again, your choices will be loaded from cache. 
+    Example: the server list textbox is populated. Keywords and settings are remembered.
+    The selected scripts repository is remembered. You will have to click refresh to see the list of scripts again.
 ---------------------------
 * Developers Note: 
     - Template Scripts (default repository) are used when creating your own custom scripts. They provide a guide to follow. 
