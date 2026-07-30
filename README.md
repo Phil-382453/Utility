@@ -24,8 +24,7 @@
   - Everytime you launch this script, robocopy will compare the cache files, last modified date property,
     to the source file last modified date. If a difference is found, robocopy will re-sync the modified files on the client. 
   - launch continues to load the rest of the script including the application window.
-  - If you are reading the code in PowerShell_ISE ... code to draw the app window is at the bottom of the script.
-  - Once the app window loads, the user can select the desired scripts repo and click the refresh button.
+  - Once the app window loads, the user can select the desired scripts repo and click the refresh button ... see screenshots.
   - The refresh button will populate the red Main tab with the script files in the selected repository.
   - The (sync) during launch prevents the client from modifying the default files between application launches.
   - This also allows the source files to be updated then automatically synchronized to the client every launch.
@@ -39,8 +38,8 @@
    - Subfolder - for each script repository listed on the Ren Main tab. Output files are saved here.
    - Source files not copied include a folder (script repo) called DevScripts that includes 44 working powershell scripts.
 
-* Uninstall - Uninstall button on the main app window under settings...This will delete the wrapper local cache files.
-   You can also delete this local cache folder to uninstall the client files.
+* Uninstall - Delete the local caches folder (...\AppData\Roaming\ScriptWrapper).
+   - There is an uninstall button under settings on the main window.
   
 * The Main app window: See the "Screenshot Main App.jpg" file
    - Many Textboxes or settings you change remember the new value even after restart.
