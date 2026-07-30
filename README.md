@@ -103,9 +103,9 @@
     - Edit script, Save, Refresh button, Run (verify) ... Repeat as needed.
 	
     - The top of each script contains a help section that is required for your script to work in this tool:
-    -    Synopsis      - Provide a description of the script (Main tab - 3rd column of the scripts list).
-    -    Functionality - a comma separated list of keywords. (used with Find Scripts by Keyword(s)).
-    -    Output        - Text, Table, MultiSheet, InputTab, Local, or Standalone.
+    - Synopsis - Provide a description of the script (Main tab - 3rd column of the scripts list).
+    - Functionality - a comma separated list of keywords. (used with Find Scripts by Keyword(s)).
+    - Output - Text, Table, MultiSheet, InputTab, Local, or Standalone.
       - Text  - Output/Results are sent to a text based output tab. Bottom buttons let you send this to notepad.
       - Table - Output/Results are sent to a table based output tab. Bottom buttons let you send this to excel.
       - Multisheet - Results are sent to multiple output tabs. Each tab can be text or table based on your choices.
