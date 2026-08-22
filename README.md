@@ -35,7 +35,7 @@
    - Subfolder (Config)          - 1) Initial settings for Creds, 2) Operation (local/remote), etc.
    - Subfolder (Modules)         - Custom PowerShell modules required by the main app.
    - Subfolder (ScriptsTemplate) - files used when creating or adding new scripts.
-   - Subfolder - for each script repository listed on the Ren Main tab. Output files are saved here.
+   - Subfolder - for each script repository listed on the Red Main tab. Output files are saved here.
    - Source files not copied include a folder (script repo) called DevScripts that includes 44 working powershell scripts.
 
 * Uninstall - Delete the local caches folder (...\AppData\Roaming\ScriptWrapper).
